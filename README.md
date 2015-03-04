@@ -1,4 +1,3 @@
-#Stanford CS193P 2015<br>
-##Code of demo in class, just for convenience
-###See at the different branches
+#Lecture 12 Demo
+**Without the eliminating a completed row**
 

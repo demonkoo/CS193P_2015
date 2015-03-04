@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Dropit View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DropitViewController" customModule="DropitSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BezierPathsView" customModule="DropitSwift" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khy-25-e9Y" customClass="BezierPathsView" customModule="DropitSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7lP-gD-GZD" appends="YES" id="1EE-Cn-yhn"/>
+                                    <outletCollection property="gestureRecognizers" destination="Msa-hr-RJk" appends="YES" id="K9o-9w-wqu"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Khy-25-e9Y" secondAttribute="trailing" id="8E6-xF-0Cz"/>
+                            <constraint firstItem="Khy-25-e9Y" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="DvV-Q7-Mnm"/>
+                            <constraint firstItem="Khy-25-e9Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jxr-Gd-td4"/>
+                            <constraint firstItem="Khy-25-e9Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ddh-g6-12Y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="Khy-25-e9Y" id="FeR-Y9-1fG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7lP-gD-GZD">
+                    <connections>
+                        <action selector="drop:" destination="BYZ-38-t0r" id="gNm-hp-sdd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Msa-hr-RJk">
+                    <connections>
+                        <action selector="grabDrop:" destination="BYZ-38-t0r" id="o04-nL-2cL"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
